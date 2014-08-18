@@ -19,7 +19,7 @@ users.table
 
 
 Scenario: Verify that users are not logged in when using an incorrect password
-Meta: @id config_wrong_password
+Meta: @id config_wrong_password @skip
 Given a new browser instance
 And the login page
 And the username <username>
@@ -31,7 +31,7 @@ users.table
 
 
 Scenario: Verify that if users don't login, then they are not logged in (According to the ILogin.isLoggedIn() method)
-Meta: @id config_is_logged_in
+Meta: @id config_is_logged_in @skip
 Given a new browser instance
 And the login page
 Then the user is not logged in

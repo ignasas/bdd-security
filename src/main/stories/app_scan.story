@@ -9,7 +9,7 @@ Meta: @story app_scan
 
 
 Scenario: The application should not contain SQL injection vulnerabilities
-Meta: @id scan_sql_injection
+Meta: @id scan_sql_injection 
 GivenStories: navigate_app.story
 Given a scanner with all policies disabled
 And the SQL-Injection policy is enabled
@@ -21,7 +21,7 @@ Then no Medium or higher risk vulnerabilities should be present
 
 
 Scenario: The application should not contain Cross Site Scripting vulnerabilities
-Meta: @id scan_xss
+Meta: @id scan_xss @skip
 GivenStories: navigate_app.story
 Given a scanner with all policies disabled
 And the Cross-Site-Scripting policy is enabled
